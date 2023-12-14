@@ -1,0 +1,35 @@
+<div class="container ">
+
+
+
+  <h3 class=" mt-3 mb-3">Hello Chintan</h3>
+  <div>
+    <app-cmtom></app-cmtom>
+  </div>
+
+  <div class="card mt-5 mb-5 p-3">
+    <h4>Pipe, CustomPipe</h4>
+
+    <h6>Today Date: {{todayDate}}</h6>
+    <h6>{{todayDate | uppercase}}</h6>
+    <h6>{{todayDate | date | lowercase}}</h6>
+
+    <label for="rtext">Enter Text :</label>
+    <input type="text" [(ngModel)]="name">
+    <p>ReverseString: {{name | reverseString}}</p>
+
+    <label for="celsius">Celsius : </label>
+    <input type="text" id="celsius" [(ngModel)]="celsius">
+    <p>Fahrenheit : {{celsius | celsiusToFahrenheit}} </p>
+  </div>
+
+
+  <app-home></app-home>
+
+
+
+
+
+</div>
+
+<router-outlet></router-outlet>

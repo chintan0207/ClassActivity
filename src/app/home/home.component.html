@@ -1,0 +1,35 @@
+
+
+<div class="card p-4">
+    <p class="text-center">Home Component</p>
+    <div class="card p-3 mb-3">
+        <h3>Reactive Forms</h3>
+
+        <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" formControlName="name" required><br>
+            
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" formControlName="email" required><br><br>
+            
+            <button type="submit">Submit</button><br>
+          </form>
+
+    </div>
+
+    <div class="card p-3 mb-3">
+        <h3>Template-Driven Forms</h3>
+
+        <form #myForm2="ngForm" (ngSubmit)="onSubmit2()">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" [(ngModel)]="model.name" required><br>
+            
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" [(ngModel)]="model.email" required><br><br>
+            
+            <button type="submit">Submit</button>
+          </form>
+
+    </div>
+
+</div>
